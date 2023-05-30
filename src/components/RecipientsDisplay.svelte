@@ -1,12 +1,12 @@
-<script>
-  export let recipients = []
+<script lang="ts">
+  export let recipients: Array<string> = []
 
   const width = (window.innerWidth - 48) * 0.3
   const fontSize = 16
   const maxCharacters = Math.floor(width / (0.6 * fontSize))
 
-  const shownEmails = []
-  const hiddenEmails = []
+  const shownEmails: Array<string> = []
+  const hiddenEmails: Array<string> = []
   const formattedString = recipients
     .slice(1)
     .reduce((ret = '', cur = '', curIndex = -1, self = []) => {
